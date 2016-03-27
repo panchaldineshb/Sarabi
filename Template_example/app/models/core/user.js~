@@ -1,0 +1,31 @@
+/**
+ * Defines all models
+ */
+var mongoose = require('mongoose');
+
+/**
+* Modeling data with Mongoose
+*/
+ 
+var mongoose = require('mongoose'),
+	Schema = mongoose.Schema,
+	ObjectId = Schema.ObjectId;
+ 
+mongoose.connect('mongodb://localhost/test');
+console.log('Database connected.');
+
+/**
+ * model : User
+ */
+module.exports = mongoose.model('User', new Schema({
+	id: ObjectId,
+	displayname: String,
+	firstname: String,
+	lastname: String,
+	password: String,
+	dob: Date
+}));
+console.log('User exported.');
+
+
+

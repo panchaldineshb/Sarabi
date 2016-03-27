@@ -1,0 +1,87 @@
+﻿@model FsaStore.Core.Models.RegistrationViewModel
+@{
+    ViewBag.Title = "Registration";
+}
+@section header {
+    <hr>
+}
+@section navbar {
+    <div class="masthead">
+        <ul class="nav nav-pills pull-right">
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+        <h3 class="muted">
+            Project name</h3>
+    </div>
+    <hr />
+}
+@section footer {
+    <hr />
+    <div class="footer">
+        <p>
+            &copy; SarabiStore Development Team @System.DateTime.Now.ToString("yyyy")</p>
+    </div>
+}
+<h2>
+    Registration</h2>
+<p>
+    Please enter your username and password to login. @Html.ActionLink("Sign In", "LogOn", "Account")
+</p>
+@Html.ValidationSummary(true, "Registration was unsuccessful. Please correct the errors and try again.")
+{{ status }}
+<form class="form-horizontal" ng-controller="accountController" ng-submit="insertAccount(account)">
+<div class="form-group">
+    @Html.LabelFor(m => m.Email, new { @class = "col-xs-2 control-label" })
+    <div class="col-xs-10">
+        @Html.TextBoxFor(m => m.Email, new { @class = "form-control", placeholder = "Email", ng_model = "account.Email" })
+        @Html.ValidationMessageFor(m => m.Email, null, new { @class = "help-block" })
+    </div>
+</div>
+<div class="form-group">
+    @Html.LabelFor(m => m.Firstname, new { @class = "col-xs-2 control-label" })
+    <div class="col-xs-10">
+        @Html.TextBoxFor(m => m.Firstname, new { @class = "form-control", placeholder = "Firstname", ng_model = "account.Firstname" })
+        @Html.ValidationMessageFor(m => m.Firstname, null, new { @class = "help-block" })
+    </div>
+</div>
+<div class="form-group">
+    @Html.LabelFor(m => m.Lastname, new { @class = "col-xs-2 control-label" })
+    <div class="col-xs-10">
+        @Html.TextBoxFor(m => m.Lastname, new { @class = "form-control", placeholder = "Lastname", ng_model = "account.Lastname" })
+        @Html.ValidationMessageFor(m => m.Lastname, null, new { @class = "help-block" })
+    </div>
+</div>
+<div class="form-group">
+    @Html.LabelFor(m => m.Password, new { @class = "col-xs-2 control-label" })
+    <div class="col-xs-10">
+        @Html.PasswordFor(m => m.Password, new { @class = "form-control", type = "password", placeholder = "Password", ng_model = "account.Password" })
+        @Html.ValidationMessageFor(m => m.Password, null, new { @class = "help-block" })
+    </div>
+</div>
+<div class="form-group">
+    @Html.LabelFor(m => m.Phone, new { @class = "col-xs-2 control-label" })
+    <div class="col-xs-10">
+        @Html.TextBoxFor(m => m.Phone, new { @class = "form-control", placeholder = "Phone", ng_model = "account.Phone" })
+        @Html.ValidationMessageFor(m => m.Phone, null, new { @class = "help-block" })
+    </div>
+</div>
+<div class="form-group">
+    @Html.LabelFor(m => m.SecondPhone, new { @class = "col-xs-2 control-label" })
+    <div class="col-xs-10">
+        @Html.TextBoxFor(m => m.SecondPhone, new { @class = "form-control", placeholder = "Second Phone", ng_model = "account.SecondPhone" })
+        @Html.ValidationMessageFor(m => m.SecondPhone, null, new { @class = "help-block" })
+    </div>
+</div>
+<div class="form-group">
+    @Html.LabelFor(m => m.Companies, new { @class = "col-xs-2 control-label" })
+    <div class="col-xs-10">
+        @Html.DropDownListFor(m => m.CompanyId, new SelectList(Model.Companies, "Id", "Name"), new { @class = "form-control", placeholder = "CompanyId", ng_model = "account.CompanyId" })
+        @Html.ValidationMessageFor(m => m.Companies, null, new { @class = "help-block" })
+    </div>
+</div>
+<p>
+    <input type="submit" class="btn btn-primary" name="Register" value="Register" />
+</p>
+</form>

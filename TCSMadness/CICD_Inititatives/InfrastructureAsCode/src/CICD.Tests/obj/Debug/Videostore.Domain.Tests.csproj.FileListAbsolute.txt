@@ -1,0 +1,9 @@
+C:\Dev\Dropbox\My Dropbox\MVCVideoStore\Videostore.Domain.Tests\bin\Debug\Videostore.Domain.Tests.dll
+C:\Dev\Dropbox\My Dropbox\MVCVideoStore\Videostore.Domain.Tests\bin\Debug\Videostore.Domain.Tests.pdb
+C:\Dev\Dropbox\My Dropbox\MVCVideoStore\Videostore.Domain.Tests\bin\Debug\Rhino.Mocks.dll
+C:\Dev\Dropbox\My Dropbox\MVCVideoStore\Videostore.Domain.Tests\bin\Debug\Rhino.Mocks.xml
+C:\Dev\Dropbox\My Dropbox\MVCVideoStore\Videostore.Domain.Tests\obj\Debug\ResolveAssemblyReference.cache
+C:\Dev\Dropbox\My Dropbox\MVCVideoStore\Videostore.Domain.Tests\obj\Debug\Videostore.Domain.Tests.dll
+C:\Dev\Dropbox\My Dropbox\MVCVideoStore\Videostore.Domain.Tests\obj\Debug\Videostore.Domain.Tests.pdb
+C:\Dev\Dropbox\My Dropbox\MVCVideoStore\Videostore.Domain.Tests\bin\Debug\VideoStore.Domain.dll
+C:\Dev\Dropbox\My Dropbox\MVCVideoStore\Videostore.Domain.Tests\bin\Debug\VideoStore.Domain.pdb

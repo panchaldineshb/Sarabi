@@ -1,0 +1,12 @@
+{
+  "name"         : "Sarabi-template-v1",
+  "version"      : "1.0.0",
+  "description"  : "Sarabi-template-v1 application.",
+  "main"         : "server.js",
+  "author"       : "Dinesh Panchal",
+  "private"		  : true,
+  "dependencies" : {
+    "express"    : "~3.5.0",
+    "mongoose"   : "~3.6.13"
+  }
+}

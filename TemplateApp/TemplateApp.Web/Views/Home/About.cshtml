@@ -1,0 +1,93 @@
+﻿@{
+    ViewBag.Title = "About Page";
+}
+@section header {
+        <!-- start header -->
+         <div id="header" ng-controller="mainController">
+            <div class="content">
+               <h1>SARABI LLC</h1>
+               <p>{{tagLine}}</p>
+            </div>
+         </div>
+         <!-- end header -->
+
+}
+@section navbar {
+         <!-- start .navbar -->
+         <div class="navbar">
+            <div class="navbar-inner">
+               <div class="container">
+                  <ul class="nav">
+                     <li class="active">@Html.ActionLink("Home", "Index", "Home")</li>
+                     <li>@Html.ActionLink("Projects", "Index", "Projects")</li>
+                     <li>@Html.ActionLink("Services", "Index", "Services")</li>
+                     <li>@Html.ActionLink("Companies", "Index", "Companies")</li>
+                     <li>@Html.ActionLink("Register", "Register", "Account")</li>
+                     <li>@Html.ActionLink("SignIn", "SignIn", "Account")</li>
+                     <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                     <li>@Html.ActionLink("About", "About", "Home")</li>
+                  </ul>
+               </div>
+            </div>
+         </div>
+         <!-- end .navbar -->
+}
+@section footer {
+             <!-- startfooter -->
+         <div id="footer">
+            <div class="content">
+               <p>Copyright &copy;2014 Sarabi LLC | <a href="panchaldineshb@gmail.com">Contact Us</a></p>
+            </div>
+         </div>
+         <!-- end footer -->
+}
+
+<!-- start #wrapper -->
+<div id="wrapper">
+    <div id="outer1" ng-controller="mainController">
+        <div class="content">
+            <header>
+                <h3>Phone</h3>
+            </header>
+            <p>
+                <span class="label">Main:</span> <span>425.555.0100</span>
+            </p>
+            <p>
+                <span class="label">After Hours:</span> <span>425.555.0199</span>
+            </p>
+        </div>
+        <!-- end content -->
+    </div>
+    <!-- start topbar -->
+    <div id="topbar">
+        <div class="content">
+            <header>
+                <h3>Email</h3>
+            </header>
+            <p>
+                <span class="label">Support:</span> <span><a href="mailto:Support@example.com">Support@example.com</a></span>
+            </p>
+            <p>
+                <span class="label">Marketing:</span> <span><a href="mailto:Marketing@example.com">Marketing@example.com</a></span>
+            </p>
+            <p>
+                <span class="label">General:</span> <span><a href="mailto:General@example.com">General@example.com</a></span>
+            </p>
+        </div>
+    </div>
+    <!-- end topbar -->
+    <div id="outer5">
+        <div class="content">
+            <header>
+                <h3>Address</h3>
+            </header>
+            <p>
+                One Microsoft Way<br />
+                Redmond, WA 98052-6399
+            </p>
+        </div>
+        <!-- end content -->
+    </div>
+    <!-- end outer5 -->
+</div>
+<!-- end #wrapper -->

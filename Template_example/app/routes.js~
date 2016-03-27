@@ -1,0 +1,41 @@
+/**	app/routes.js
+*/
+
+
+/** Refer to following for more explanation on module.export
+* http://openmymind.net/2012/2/3/Node-Require-and-Exports/
+*/
+var fs = require('fs');
+
+module.exports = function (app) {
+
+	/**	Registration routes
+	*/
+	/**	Login routes
+	*/
+	/**	Registration routes
+	require('./routes/employeeRoutes.js')(app);
+	require('./routes/matrixRoutes.js')(app);
+	require('./routes/orderRoutes.js')(app);
+	*/
+
+	//	api route ===========================================
+	app.get('/api/nerds', function (req, res) {
+
+		Nerd.find(function(err, nerds) {
+			
+			if(err)	{
+				/** there should be better way to let caller know about the error
+				*/
+				res.send(err);
+			} else {
+				res.json(nerds); // return all nerds in JSON format			
+			}
+			
+		});
+
+	});
+
+	require('./routes/defaultroute.js')(app);
+ 
+}

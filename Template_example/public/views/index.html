@@ -1,0 +1,153 @@
+<!doctype html>
+<!--
+   Referred Example:
+    
+   http://www.cssplay.co.uk/layouts/flexible-equal-height.html
+    
+   -->
+<!-- ASSIGN OUR ANGULAR MODULE -->
+<html ng-app="templateApp">
+
+   <head>
+
+      <!-- META -->
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <!-- Optimize mobile viewport -->
+      <title>Node/Angular Todo App</title>
+
+      <!-- SCROLLS -->
+      <!-- //netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css -->
+      <link rel="stylesheet" href="../libs/bootstrap.min.css">
+
+      <!-- load bootstrap -->
+      <link rel="stylesheet" href="../css/styles.css" type="text/css">
+
+   </head>
+
+   <!-- SET THE CONTROLLER AND GET ALL TODOS WITH INITIALIZE FUNCTION -->
+   <body>
+      <!-- start layout -->
+      <div id="layout">
+         <!-- start header -->
+         <div id="header" ng-controller="mainController">
+            <div class="content">
+               <h1>SARABI LLC</h1>
+               <p>{{tagLine}}</p>
+            </div>
+         </div>
+         <!-- end header -->
+         <!-- start .navbar -->
+         <div class="navbar">
+            <div class="navbar-inner">
+               <div class="container">
+                  <ul class="nav">
+                     <li class="active"><a href="/">Home</a></li>
+                     <li><a href="/projects">Projects</a></li>
+                     <li><a href="/services">Services</a></li>
+                     <li><a href="/companies">Companies</a></li>
+                     <li><a href="/register">Register</a></li>
+                     <li><a href="/signin">SignIn</a></li>
+                     <li><a href="/contactus">Contact</a></li>
+                     <li><a href="/about">About</a></li>
+                  </ul>
+               </div>
+            </div>
+         </div>
+         <!-- end .navbar -->
+         <!-- start #wrapper -->
+         <div id="wrapper">
+            <div id="outer1" ng-controller="mainController">
+               <div class="content">
+                  <h3>Bundles Supported: {Left 20%}</h3>
+                  <div ng-repeat="bundle in bundlesSupported">
+                     <p><a href="{{bundle.name}}">{{bundle.displayName}}</a></p>
+                  </div>
+               </div>
+               <!-- end content -->
+            </div>
+            <!-- start topbar -->
+            <div id="topbar">
+               <div class="content">
+                  <h3>Top Bar 60%</h3>
+                  <p>You can have any number of columns as long as the total width is 100%;</p>
+                  <p>This top bar can be any combined width of the lower columns and can span any number of columns.</p>
+                  <p>All this is done with simple divs.</p>
+               </div>
+            </div>
+            <!-- end topbar -->
+            <div id="outer5">
+               <div class="content">
+                  <h3>Right 20%</h3>
+                  <p>Etiam ullamcorper purus eget felis. Ut mollis pretium nisl. Nulla suscipit pellentesque lacus. Sed condimentum iaculis massa. In leo nisl, porttitor at, fermentum a, vulputate nec, dui. Praesent quis nisi eget felis tincidunt tempor. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nulla augue. Duis in ipsum at ante egestas accumsan.</p>
+               </div>
+               <!-- end content -->
+            </div>
+            <!-- end outer5 -->
+            <br />
+            <div id="outer2">
+               <div class="content">
+                  <h3>Mid Left 15%</h3>
+                  <p>This layout has been tested in IE6, IE7, Firefox, Opera, Safari(PC) and Chrome all latest versions.</p>
+                  <p>All the colors are background color, so there is no need for background images to give the impression of full height columns.</p>
+               </div>
+               <!-- end content -->
+            </div>
+            <!-- end outer2 -->
+            <div id="outer3">
+               <div class="content">
+                  <h3>Mid Center 30%</h3>
+                  <p>This layout has been tested in IE6, IE7, Firefox, Opera, Safari(PC) and Chrome all latest versions.</p>
+                  <p>All the colors are background color, so there is no need for background images to give the impression of full height columns.</p>
+                  <p>All five columns will end at the footer.</p>
+               </div>
+               <!-- end content -->
+            </div>
+            <!-- end outer3 -->
+            <div id="outer4">
+               <div class="content">
+                  <h3>Mid Right 15%</h3>
+                  <p>This layout has been tested in IE6, IE7, Firefox, Opera, Safari(PC) and Chrome all latest versions.</p>
+                  <p>All the colors are background color, so there is no need for background images to give the impression of full height columns.</p>
+                  <p>All five columns will end at the footer.</p>
+                  <p>IE6 does require a couple of hacks to overcome its lack of min/max width and its rounding errors when using percentage values.</p>
+               </div>
+               <!-- end content -->
+            </div>
+            <!-- end outer4 -->
+         </div>
+         <!-- end #wrapper -->
+         <!-- startfooter -->
+         <div id="footer">
+            <div class="content">
+               <p>Copyright &copy;2014 Sarabi LLC | <a href="panchaldineshb@gmail.com">Contact Us</a></p>
+            </div>
+         </div>
+         <!-- end footer -->
+      </div>
+      <!-- end layout -->
+
+      <!-- SPELLS -->
+      <!-- 
+         http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js 
+         http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js
+      -->
+      <script src="../libs/jquery.min.js"></script><!-- load jquery -->
+      
+      <!-- 
+         http://ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.min.js
+         http://ajax.googleapis.com/ajax/libs/angularjs/1.2.13/angular.min.js
+         http://ajax.googleapis.com/ajax/libs/angularjs/1.2.13/angular-cookies.min.js
+         http://ajax.googleapis.com/ajax/libs/angularjs/1.2.13/angular-route.min.js
+         http://ajax.googleapis.com/ajax/libs/angularjs/1.2.14/angular-resource.min.js
+      -->
+      <script src="../libs/angular.min.js"></script><!-- load angular -->
+      <script src="../libs/angular-cookies.min.js"></script><!-- load angular -->
+      <script src="../libs/angular-route.min.js"></script><!-- load angular -->
+      <script src="../libs/angular-resource.min.js"></script><!-- load angular -->
+
+      <script src="../js/app.js"></script><!-- load angular application-module -->
+
+   </body>
+</html>

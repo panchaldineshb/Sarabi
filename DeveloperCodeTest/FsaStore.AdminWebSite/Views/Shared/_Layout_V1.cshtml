@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<!--
+   Referred Example:
+
+   http://www.cssplay.co.uk/layouts/flexible-equal-height.html
+
+   -->
+<!-- ASSIGN OUR ANGULAR MODULE -->
+<html lang="en">
+<head>
+    <!-- META -->
+    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1" />
+    <title>@ViewBag.Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="@Styles.Url("~/content/css")" rel="stylesheet" />
+    @Html.Partial("_html5shiv")
+</head>
+<body ng-app="SarabiStoreApp">
+    <!-- start layout -->
+    @RenderSection("header", required: false)
+    @RenderSection("navbar", required: false)
+    <div class="container">
+        <div class="row">
+            <div class="col-md-2">
+                <ul class="nav">
+                    <li><a href="#AddNewOrder">Add New Order </a></li>
+                    <li><a href="#ShowOrders">Show Order </a></li>
+                </ul>
+            </div>
+            <div class="col-md-9">
+                <div ng-view>
+                </div>
+            </div>
+        </div>
+        @RenderBody()
+        <hr>
+        @RenderSection("footer", required: false)
+    </div>
+    @Scripts.Render("~/js") @RenderSection("Scripts", required: false)
+</body>
+</html>

@@ -1,0 +1,5 @@
+C:\Dev\Dropbox\My Dropbox\MVCVideoStore\VideoStore.Domain\bin\Debug\VideoStore.Domain.dll
+C:\Dev\Dropbox\My Dropbox\MVCVideoStore\VideoStore.Domain\bin\Debug\VideoStore.Domain.pdb
+C:\Dev\Dropbox\My Dropbox\MVCVideoStore\VideoStore.Domain\obj\Debug\ResolveAssemblyReference.cache
+C:\Dev\Dropbox\My Dropbox\MVCVideoStore\VideoStore.Domain\obj\Debug\VideoStore.Domain.dll
+C:\Dev\Dropbox\My Dropbox\MVCVideoStore\VideoStore.Domain\obj\Debug\VideoStore.Domain.pdb

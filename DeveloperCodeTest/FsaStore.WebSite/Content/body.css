@@ -1,0 +1,9 @@
+  body {
+            padding-top: 60px;
+            padding-bottom: 40px;
+          }
+
+  .done-true {
+            text-decoration: line-through;
+            color: grey;
+        }

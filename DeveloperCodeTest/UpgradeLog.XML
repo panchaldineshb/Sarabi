@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="FsaStore.DeveloperCodeTest">
+</Property><Property Name="Solution File" Value="C:\Projects\DeveloperCodeTest\DeveloperCodeTest\FsaStore.DeveloperCodeTest.sln">
+</Property><Property Name="Date" Value="Tuesday, July 08, 2014">
+</Property><Property Name="Time" Value="6:11 AM">
+</Property></Properties><Event ErrorLevel="0" Project="" Source="FsaStore.DeveloperCodeTest.sln" Description="File successfully backed up as C:\Projects\DeveloperCodeTest\DeveloperCodeTest\Backup\FsaStore.DeveloperCodeTest.sln">
+</Event><Event ErrorLevel="0" Project="FsaStore.DeveloperCodeTest" Source="FsaStore.DeveloperCodeTest\FsaStore.DeveloperCodeTest.csproj" Description="Project file successfully backed up as C:\Projects\DeveloperCodeTest\DeveloperCodeTest\Backup\FsaStore.DeveloperCodeTest\FsaStore.DeveloperCodeTest.csproj">
+</Event><Event ErrorLevel="0" Project="FsaStore.DeveloperCodeTest" Source="FsaStore.DeveloperCodeTest\Code\CustomerTestProfile.cs" Description="File successfully backed up as C:\Projects\DeveloperCodeTest\DeveloperCodeTest\Backup\FsaStore.DeveloperCodeTest\Code\CustomerTestProfile.cs">
+</Event><Event ErrorLevel="0" Project="FsaStore.DeveloperCodeTest" Source="FsaStore.DeveloperCodeTest\Code\CustomerTestProfileExtensions.cs" Description="File successfully backed up as C:\Projects\DeveloperCodeTest\DeveloperCodeTest\Backup\FsaStore.DeveloperCodeTest\Code\CustomerTestProfileExtensions.cs">
+</Event><Event ErrorLevel="0" Project="FsaStore.DeveloperCodeTest" Source="FsaStore.DeveloperCodeTest\Code\IPricingService.cs" Description="File successfully backed up as C:\Projects\DeveloperCodeTest\DeveloperCodeTest\Backup\FsaStore.DeveloperCodeTest\Code\IPricingService.cs">
+</Event><Event ErrorLevel="0" Project="FsaStore.DeveloperCodeTest" Source="FsaStore.DeveloperCodeTest\Code\IShoppingCart.cs" Description="File successfully backed up as C:\Projects\DeveloperCodeTest\DeveloperCodeTest\Backup\FsaStore.DeveloperCodeTest\Code\IShoppingCart.cs">
+</Event><Event ErrorLevel="0" Project="FsaStore.DeveloperCodeTest" Source="FsaStore.DeveloperCodeTest\Code\Product.cs" Description="File successfully backed up as C:\Projects\DeveloperCodeTest\DeveloperCodeTest\Backup\FsaStore.DeveloperCodeTest\Code\Product.cs">
+</Event><Event ErrorLevel="0" Project="FsaStore.DeveloperCodeTest" Source="FsaStore.DeveloperCodeTest\Properties\AssemblyInfo.cs" Description="File successfully backed up as C:\Projects\DeveloperCodeTest\DeveloperCodeTest\Backup\FsaStore.DeveloperCodeTest\Properties\AssemblyInfo.cs">
+</Event><Event ErrorLevel="2" Project="FsaStore.DeveloperCodeTest" Source="FsaStore.DeveloperCodeTest\Web.Debug.config" Description="Failed to backup file as C:\Projects\DeveloperCodeTest\DeveloperCodeTest\Backup\FsaStore.DeveloperCodeTest\Web.Debug.config">
+</Event><Event ErrorLevel="2" Project="FsaStore.DeveloperCodeTest" Source="FsaStore.DeveloperCodeTest\Web.Release.config" Description="Failed to backup file as C:\Projects\DeveloperCodeTest\DeveloperCodeTest\Backup\FsaStore.DeveloperCodeTest\Web.Release.config">
+</Event><Event ErrorLevel="0" Project="FsaStore.DeveloperCodeTest" Source="FsaStore.DeveloperCodeTest\Web.config" Description="File successfully backed up as C:\Projects\DeveloperCodeTest\DeveloperCodeTest\Backup\FsaStore.DeveloperCodeTest\Web.config">
+</Event><Event ErrorLevel="0" Project="FsaStore.DeveloperCodeTest" Source="FsaStore.DeveloperCodeTest\Instructions.md" Description="File successfully backed up as C:\Projects\DeveloperCodeTest\DeveloperCodeTest\Backup\FsaStore.DeveloperCodeTest\Instructions.md">
+</Event><Event ErrorLevel="0" Project="FsaStore.DeveloperCodeTest" Source="FsaStore.DeveloperCodeTest\FsaStore.DeveloperCodeTest.csproj" Description="The project file does not require conversion.">
+</Event><Event ErrorLevel="3" Project="FsaStore.DeveloperCodeTest" Source="FsaStore.DeveloperCodeTest\FsaStore.DeveloperCodeTest.csproj" Description="No Conversion Required">
+</Event><Event ErrorLevel="0" Project="" Source="FsaStore.DeveloperCodeTest.sln" Description="Solution converted successfully">
+</Event><Event ErrorLevel="3" Project="" Source="FsaStore.DeveloperCodeTest.sln" Description="Converted">
+</Event></UpgradeLog>

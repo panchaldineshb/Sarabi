@@ -1,0 +1,66 @@
+/**
+ * Defines all models
+ */
+var mongoose = require('mongoose');
+
+/**
+* Modeling data with Mongoose
+*/
+ 
+var mongoose = require('mongoose'),
+	Schema = mongoose.Schema,
+	ObjectId = Schema.ObjectId;
+ 
+mongoose.connect('mongodb://localhost/test');
+console.log('Database connected.');
+
+/**
+ * model : Product
+ */
+module.exports = mongoose.model('Product', new Schema({
+	id: ObjectId,
+	description: String,
+	displayname: String,
+	name: String,
+	price: Number
+}));
+console.log('Product exported.');
+  
+/**
+ * model : Todo
+ */
+module.exports = mongoose.model('Todo', new Schema({
+	id: ObjectId,
+	description: String,
+	displayname: String,
+	done : Boolean,
+	name: String
+}));
+console.log('Todo exported.');
+
+
+/**
+ * model : User
+ */
+module.exports = mongoose.model('User', new Schema({
+	id: ObjectId,
+	displayname: String,
+	firstname: String,
+	lastname: String,
+	password: String,
+	dob: Date
+}));
+console.log('User exported.');
+
+/**
+ * model : Company
+ */
+module.exports = mongoose.model('Company', new Schema({
+	id: ObjectId,
+	displayname: String,
+	accountno: String,
+	name: String
+}));
+console.log('Company exported.');
+
+

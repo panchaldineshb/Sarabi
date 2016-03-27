@@ -1,0 +1,13 @@
+﻿@{
+    ViewBag.Title = "AccessDenied";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>AccessDenied</h2>
+
+Sorry, but you don't have access to that page.
+
+<div id="login">
+	<h1>@ViewBag.Title</h1>
+	<p>("You must belong to the role {0} to perform this action.", "<strong>" + ViewBag.UserRoleName + "</strong>")</p> 
+</div>

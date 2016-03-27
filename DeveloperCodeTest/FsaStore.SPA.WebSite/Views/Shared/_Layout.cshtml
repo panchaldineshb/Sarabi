@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html lang="en" data-ng-app="resourceManagerApp">
+<head>
+    <meta charset="utf-8" />
+    <title>@ViewBag.Title - My ASP.NET MVC Application</title>
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <meta name="viewport" content="width=device-width" />
+    @Styles.Render("~/Content/css")
+</head>
+<body>
+    <!-- Start Layout -->
+    <div ng-controller="ResourceMngrCtrl">
+        <div class="menu-container">
+            <cst-top-menu />
+        </div>
+        <section id="main" style="height: 90%;">
+        @RenderBody()
+        </section>
+        <cst-loading-overlay class="hide"></cst-loading-overlay>
+    </div>
+    <!-- Ends Layout -->
+    @Scripts.Render("~/bundles/js")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

@@ -1,0 +1,28 @@
+/**
+ * Defines all models
+ */
+var mongoose = require('mongoose');
+
+/**
+* Modeling data with Mongoose
+*/
+ 
+var mongoose = require('mongoose'),
+	Schema = mongoose.Schema,
+	ObjectId = Schema.ObjectId;
+ 
+mongoose.connect('mongodb://localhost/test');
+console.log('Database connected.');
+
+/**
+ * model : Todo
+ */
+module.exports = mongoose.model('Todo', new Schema({
+	id: ObjectId,
+	description: String,
+	displayname: String,
+	done : Boolean,
+	name: String
+}));
+console.log('Todo exported.');
+
