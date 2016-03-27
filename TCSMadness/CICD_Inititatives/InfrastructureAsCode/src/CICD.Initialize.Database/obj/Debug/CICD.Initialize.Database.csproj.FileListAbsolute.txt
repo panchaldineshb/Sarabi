@@ -1,0 +1,11 @@
+C:\Users\Dinesh\projects\TCSMadness\CICD_Inititatives\InfrastructureAsCode\src\CICD.Initialize.Database\bin\Debug\CICD.Initialize.Database.exe.config
+C:\Users\Dinesh\projects\TCSMadness\CICD_Inititatives\InfrastructureAsCode\src\CICD.Initialize.Database\bin\Debug\CICD.Initialize.Database.exe
+C:\Users\Dinesh\projects\TCSMadness\CICD_Inititatives\InfrastructureAsCode\src\CICD.Initialize.Database\bin\Debug\CICD.Initialize.Database.pdb
+C:\Users\Dinesh\projects\TCSMadness\CICD_Inititatives\InfrastructureAsCode\src\CICD.Initialize.Database\bin\Debug\CICD.Infrastructure.dll
+C:\Users\Dinesh\projects\TCSMadness\CICD_Inititatives\InfrastructureAsCode\src\CICD.Initialize.Database\bin\Debug\EntityFramework.dll
+C:\Users\Dinesh\projects\TCSMadness\CICD_Inititatives\InfrastructureAsCode\src\CICD.Initialize.Database\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Dinesh\projects\TCSMadness\CICD_Inititatives\InfrastructureAsCode\src\CICD.Initialize.Database\bin\Debug\CICD.Infrastructure.pdb
+C:\Users\Dinesh\projects\TCSMadness\CICD_Inititatives\InfrastructureAsCode\src\CICD.Initialize.Database\bin\Debug\EntityFramework.xml
+C:\Users\Dinesh\projects\TCSMadness\CICD_Inititatives\InfrastructureAsCode\src\CICD.Initialize.Database\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Dinesh\projects\TCSMadness\CICD_Inititatives\InfrastructureAsCode\src\CICD.Initialize.Database\obj\Debug\CICD.Initialize.Database.exe
+C:\Users\Dinesh\projects\TCSMadness\CICD_Inititatives\InfrastructureAsCode\src\CICD.Initialize.Database\obj\Debug\CICD.Initialize.Database.pdb
