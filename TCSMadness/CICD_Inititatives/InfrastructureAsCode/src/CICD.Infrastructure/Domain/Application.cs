@@ -78,6 +78,11 @@ namespace CICD.Infrastructure.Domain
 
     public class Application : ISubject
     {
+        public Application()
+        {
+            Type = SubjectType.Application;
+        }
+
         public int Id { get; set; }
 
         public string Name { get; set; }

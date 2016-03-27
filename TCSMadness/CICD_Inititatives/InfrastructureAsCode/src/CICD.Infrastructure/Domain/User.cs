@@ -1,10 +1,16 @@
 ﻿using CICD.Infrastructure.Abstraction;
 using CICD.Infrastructure.Enums;
+using System;
 
 namespace CICD.Infrastructure.Domain
 {
     public class User : ISubject
     {
+        public User()
+        {
+            Type = SubjectType.User;
+        }
+
         public int Id { get; set; }
 
         public string Name { get; set; }
@@ -20,6 +26,11 @@ namespace CICD.Infrastructure.Domain
 
     public class Token : IEntity<int>
     {
+        public Token()
+        {
+            Key = Guid.NewGuid().ToString();
+        }
+
         public int Id { get; set; }
 
         public string Key { get; set; }

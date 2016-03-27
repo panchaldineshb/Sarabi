@@ -2,10 +2,10 @@
 
 namespace CICD.Infrastructure.Domain
 {
-    public class RegistrationReponse : IResponse<ISubject>
+    public class RegistrationReponse : IResponse<string>
     {
         public bool IsSuccessful { get; set; }
 
-        public ISubject Subject { get; set; }
+        public string TokenKey { get; set; }
     }
 }

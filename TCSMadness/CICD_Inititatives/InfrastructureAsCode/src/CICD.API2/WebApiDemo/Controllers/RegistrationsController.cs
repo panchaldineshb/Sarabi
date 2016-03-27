@@ -33,10 +33,10 @@ namespace CICD.API2.Controllers
 
         [Route("")]
         [HttpPost]
-        public async Task<IHttpActionResult> Post([FromBody]CryptoRequest request)
+        public async Task<IHttpActionResult> Post([FromBody]RegistrationRequest request, CancellationToken cancellationToken)
         {
             return await Task.FromResult(new ResponseMessageResult(Request.CreateResponse(HttpStatusCode.Created,
-                new CryptoReponse()
+                new RegistrationReponse()
                 {
                 })));
         }
