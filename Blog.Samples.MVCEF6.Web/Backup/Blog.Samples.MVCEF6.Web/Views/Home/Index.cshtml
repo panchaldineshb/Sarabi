@@ -1,0 +1,13 @@
+﻿@model Blog.Samples.MVCEF6.Web.Models.HomeViewModel
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+@Html.DropDownListFor(m => m.SelectedBusinessEntityID, Model.Vendors.Select(v => new SelectListItem
+    {
+        Text = v.Name,
+        Value = v.BusinessEntityID.ToString()
+    }))

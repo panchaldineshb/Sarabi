@@ -1,0 +1,10 @@
+C:\Users\Dinesh\projects\Blog.Samples.MVCEF6.Web\Blog.Samples.MVCEF6.Data\bin\Debug\Blog.Samples.MVCEF6.Data.dll.config
+C:\Users\Dinesh\projects\Blog.Samples.MVCEF6.Web\Blog.Samples.MVCEF6.Data\bin\Debug\Blog.Samples.MVCEF6.Data.dll
+C:\Users\Dinesh\projects\Blog.Samples.MVCEF6.Web\Blog.Samples.MVCEF6.Data\bin\Debug\Blog.Samples.MVCEF6.Data.pdb
+C:\Users\Dinesh\projects\Blog.Samples.MVCEF6.Web\Blog.Samples.MVCEF6.Data\bin\Debug\EntityFramework.dll
+C:\Users\Dinesh\projects\Blog.Samples.MVCEF6.Web\Blog.Samples.MVCEF6.Data\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Dinesh\projects\Blog.Samples.MVCEF6.Web\Blog.Samples.MVCEF6.Data\bin\Debug\EntityFramework.xml
+C:\Users\Dinesh\projects\Blog.Samples.MVCEF6.Web\Blog.Samples.MVCEF6.Data\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Dinesh\projects\Blog.Samples.MVCEF6.Web\Blog.Samples.MVCEF6.Data\obj\Debug\Blog.Samples.MVCEF6.Data.csprojResolveAssemblyReference.cache
+C:\Users\Dinesh\projects\Blog.Samples.MVCEF6.Web\Blog.Samples.MVCEF6.Data\obj\Debug\Blog.Samples.MVCEF6.Data.dll
+C:\Users\Dinesh\projects\Blog.Samples.MVCEF6.Web\Blog.Samples.MVCEF6.Data\obj\Debug\Blog.Samples.MVCEF6.Data.pdb
