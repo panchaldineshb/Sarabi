@@ -1,5 +1,4 @@
 ﻿using CICD.Infrastructure.Abstraction;
-using CICD.Infrastructure.Domain;
 
 namespace CICD.Infrastructure.Domain
 {

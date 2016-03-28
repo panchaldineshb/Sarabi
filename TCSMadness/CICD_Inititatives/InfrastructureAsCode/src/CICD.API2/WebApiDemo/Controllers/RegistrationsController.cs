@@ -13,12 +13,12 @@ namespace CICD.API2.Controllers
     [RoutePrefix("api/cicd/registrations")]
     public class RegistrationsController : ApiController
     {
-        protected IRegistrationsService _RegistrationsService = null;
+        protected IRegistrationsService _registrationsService = null;
 
         public RegistrationsController(
-            IRegistrationsService RegistrationsService)
+            IRegistrationsService registrationsService)
         {
-            _RegistrationsService = RegistrationsService;
+            _registrationsService = registrationsService;
         }
 
         // GET api/Stuff

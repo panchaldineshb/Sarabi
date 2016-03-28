@@ -12,11 +12,19 @@ namespace CICD.Infrastructure.Abstraction
         void Add(Video v);
     }
 
+    public interface IApplicationValidator : IValidator<Application>
+    {
+    }
+
     public interface IApplicationRepository : IRepository<Application>
     {
     }
 
     public interface IUserRepository : IRepository<User>
+    {
+    }
+
+    public interface IUserValidator : IValidator<User>
     {
     }
 

@@ -1,4 +1,5 @@
 ﻿using CICD.Infrastructure.Abstraction;
+using CICD.Infrastructure.Database;
 using CICD.Infrastructure.Domain;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,6 +9,13 @@ namespace CICD.Infrastructure.Implementation
 {
     public class ApplicationRepository : IApplicationRepository
     {
+        private readonly InfrastructureContext _context;
+
+        public ApplicationRepository(InfrastructureContext context)
+        {
+            _context = context;
+        }
+
         private const string key = "ApplicationS";
 
         private IDictionary<int, Application> Subjects

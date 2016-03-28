@@ -1,6 +1,7 @@
 ﻿using Autofac;
 using Autofac.Integration.WebApi;
 using CICD.Infrastructure.Abstraction;
+using CICD.Infrastructure.Database;
 using CICD.Infrastructure.Domain;
 using CICD.Infrastructure.Implementation;
 using System.Reflection;
@@ -22,7 +23,8 @@ namespace CICD.API2
 
             builder.RegisterType<VideoRepository>().As<IRepository<Video>>();
             builder.RegisterType<UserRepository>().As<IUserRepository>().As<IRepository<User>>();
-            builder.RegisterType<ApplicationRepository>().As<IApplicationRepository>().As<IRepository<Application>>();
+            builder.RegisterType<ApplicationRepository>().As<IApplicationRepository>().As<IRepository<Application>>()
+                .WithParameter("context", new InfrastructureContext());
 
             var container = builder.Build();
 

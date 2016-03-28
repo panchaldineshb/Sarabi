@@ -107,7 +107,10 @@
     <Compile Include="Abstraction\IRequest.cs" />
     <Compile Include="Abstraction\IEntity.cs" />
     <Compile Include="Abstraction\IRepository.cs" />
+    <Compile Include="Abstraction\IValidator.cs" />
     <Compile Include="Abstraction\VoidResponse.cs" />
+    <Compile Include="Database\InfrastructureConfiguration.cs" />
+    <Compile Include="Database\InfrastructureContext.cs" />
     <Compile Include="Domain\RegistrationReponse.cs" />
     <Compile Include="Domain\CryptoReponse.cs" />
     <Compile Include="Domain\RegistrationRequest.cs" />
@@ -116,6 +119,7 @@
     <Compile Include="Domain\User.cs" />
     <Compile Include="Enums\SubjectType.cs" />
     <Compile Include="Enums\CryptoOperation.cs" />
+    <Compile Include="Exceptions\ExceptionConstants.cs" />
     <Compile Include="Extensions\CastExtensions.cs" />
     <Compile Include="Implementation\DeploymentsService.cs" />
     <Compile Include="Implementation\RegistrationsService.cs" />
