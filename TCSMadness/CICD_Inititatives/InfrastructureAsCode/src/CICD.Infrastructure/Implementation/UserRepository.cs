@@ -2,12 +2,23 @@
 using CICD.Infrastructure.Domain;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
+using System;
+using CICD.Infrastructure.Database;
 
 namespace CICD.Infrastructure.Implementation
 
 {
     public class UserRepository : IUserRepository
     {
+
+        private readonly InfrastructureContext _context;
+
+        public UserRepository(InfrastructureContext context)
+        {
+            _context = context;
+        }
+
         private const string key = "UserS";
 
         private IDictionary<int, User> Subjects
@@ -60,6 +71,12 @@ namespace CICD.Infrastructure.Implementation
         public IEnumerable<User> GetAll()
         {
             return Subjects.Values.AsEnumerable();
+        }
+
+
+        public IEnumerable<User> FindBy(Expression<Func<User, bool>> predicate)
+        {
+            return _context.Users.Where(predicate);
         }
 
         public User GetById(int id)

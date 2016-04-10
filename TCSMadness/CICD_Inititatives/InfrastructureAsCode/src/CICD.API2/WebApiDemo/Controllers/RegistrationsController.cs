@@ -22,14 +22,27 @@ namespace CICD.API2.Controllers
         }
 
         // GET api/Stuff
+        //
+        // Based upon tokenKey, check in both tables Applications and Users
+        // which ever table got the key send response back being sucessful
 
-        [Route("")]
-        public async Task<IHttpActionResult> Get()
+        [Route("{token}")]
+        public async Task<IHttpActionResult> Get(string token)
         {
-            return await Task.FromResult(Ok());
+            if(_registrationsService.ValidateToken(token)) return await Task.FromResult(Ok());
+            return await Task.FromResult(new ResponseMessageResult(Request.CreateResponse(HttpStatusCode.NotFound,
+                new RegistrationReponse()
+                {
+                    IsSuccessful = false,
+                    ErrorMessage = "Provided token doesnot exists"
+                })));
         }
 
-        // POST api/Stuff
+        //
+        // POST api/registrations
+        //
+        // Create User and send tokenKey
+        // Create Application and send tokenKey
 
         [Route("")]
         [HttpPost]

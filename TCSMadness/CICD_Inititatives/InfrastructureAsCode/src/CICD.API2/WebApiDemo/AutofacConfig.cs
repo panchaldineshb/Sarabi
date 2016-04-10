@@ -22,9 +22,13 @@ namespace CICD.API2
             builder.RegisterType<RegistrationsService>().As<IRegistrationsService>().As<IService>();
 
             builder.RegisterType<VideoRepository>().As<IRepository<Video>>();
-            builder.RegisterType<UserRepository>().As<IUserRepository>().As<IRepository<User>>();
+
             builder.RegisterType<ApplicationRepository>().As<IApplicationRepository>().As<IRepository<Application>>()
                 .WithParameter("context", new InfrastructureContext());
+            builder.RegisterType<TokenRepository>().As<ITokenRepository>().As<IRepository<Token>>()
+               .WithParameter("context", new InfrastructureContext());
+            builder.RegisterType<UserRepository>().As<IUserRepository>().As<IRepository<User>>()
+               .WithParameter("context", new InfrastructureContext());
 
             var container = builder.Build();
 

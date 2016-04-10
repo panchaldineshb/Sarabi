@@ -39,5 +39,6 @@ namespace CICD.Initialize.Database
         public DbSet<CICD.Infrastructure.Domain.Application> Applications { get; set; }
 
         public DbSet<CICD.Infrastructure.Domain.User> Users { get; set; }
+        public DbSet<CICD.Infrastructure.Domain.Token> Tokens { get; set; }
     }
 }

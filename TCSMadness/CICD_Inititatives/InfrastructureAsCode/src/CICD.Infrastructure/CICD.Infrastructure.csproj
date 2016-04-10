@@ -125,6 +125,7 @@
     <Compile Include="Implementation\RegistrationsService.cs" />
     <Compile Include="Implementation\CryptoService.cs" />
     <Compile Include="Implementation\ApplicationRepository.cs" />
+    <Compile Include="Implementation\TokenRepository.cs" />
     <Compile Include="Implementation\UserRepository.cs" />
     <Compile Include="Implementation\VideoRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

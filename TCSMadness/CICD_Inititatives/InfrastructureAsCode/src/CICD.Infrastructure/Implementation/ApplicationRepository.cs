@@ -3,6 +3,8 @@ using CICD.Infrastructure.Database;
 using CICD.Infrastructure.Domain;
 using System.Collections.Generic;
 using System.Linq;
+using System;
+using System.Linq.Expressions;
 
 namespace CICD.Infrastructure.Implementation
 
@@ -10,7 +12,7 @@ namespace CICD.Infrastructure.Implementation
     public class ApplicationRepository : IApplicationRepository
     {
         private readonly InfrastructureContext _context;
-
+        
         public ApplicationRepository(InfrastructureContext context)
         {
             _context = context;
@@ -68,6 +70,12 @@ namespace CICD.Infrastructure.Implementation
         public IEnumerable<Application> GetAll()
         {
             return Subjects.Values.AsEnumerable();
+        }
+
+
+        public IEnumerable<Application> FindBy(Expression<Func<Application, bool>> predicate)
+        {
+            return _context.Applications.Where(predicate);
         }
 
         public Application GetById(int id)

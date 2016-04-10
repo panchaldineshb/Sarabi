@@ -19,6 +19,9 @@ namespace CICD.Infrastructure.Abstraction
     public interface IApplicationRepository : IRepository<Application>
     {
     }
+    public interface ITokenRepository : IRepository<Token>
+    {
+    }
 
     public interface IUserRepository : IRepository<User>
     {
@@ -41,6 +44,8 @@ namespace CICD.Infrastructure.Abstraction
 
     public interface IRegistrationsService : IService
     {
+        bool ValidateToken(string token);
+
         void Register(User v);
 
         void Register(Application v);

@@ -13,7 +13,7 @@ namespace CICD.Infrastructure.Database
 
         // Call base ctor passing database name or connection string name
         public InfrastructureContext()
-            : base("name=InfrastructureContext") //base("HelloCodeFirst")
+            : base("DefaultConnection") //base("HelloCodeFirst")
         {
             // Enable lazy loading
             Configuration.LazyLoadingEnabled = true;
@@ -35,5 +35,7 @@ namespace CICD.Infrastructure.Database
         public DbSet<Application> Applications { get; set; }
 
         public DbSet<User> Users { get; set; }
+
+        public DbSet<Token> Tokens { get; set; }
     }
 }

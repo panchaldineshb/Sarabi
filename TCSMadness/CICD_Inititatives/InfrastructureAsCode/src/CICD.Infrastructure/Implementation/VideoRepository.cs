@@ -2,6 +2,8 @@
 using CICD.Infrastructure.Domain;
 using System.Collections.Generic;
 using System.Linq;
+using System;
+using System.Linq.Expressions;
 
 namespace CICD.Infrastructure.Implementation
 
@@ -81,6 +83,12 @@ namespace CICD.Infrastructure.Implementation
         public IEnumerable<Video> GetAll()
         {
             return Videos.Values.AsEnumerable();
+        }
+
+
+        public IEnumerable<Video> FindBy(Expression<Func<Video, bool>> predicate)
+        {
+            return null;
         }
 
         public Video GetById(int id)

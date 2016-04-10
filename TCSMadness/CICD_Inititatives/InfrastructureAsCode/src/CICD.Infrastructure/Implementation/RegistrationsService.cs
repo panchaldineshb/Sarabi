@@ -47,15 +47,24 @@ namespace CICD.Infrastructure.Implementation
     {
         private IApplicationRepository _applicationRepository;
         private IUserRepository _userRepository;
+        private ITokenRepository _tokenRepository;
 
         private IValidator<Application> _applicationValidator;
         private IValidator<User> _userValidator;
 
         public RegistrationsService(
-            IUserRepository userRepository, IApplicationRepository applicationRepository)
+            IUserRepository userRepository, IApplicationRepository applicationRepository, ITokenRepository tokenRepository)
         {
             this._applicationRepository = applicationRepository;
+            this._tokenRepository = tokenRepository;
             this._userRepository = userRepository;
+        }
+
+        public bool ValidateToken(string token)
+        {
+            var entity = _tokenRepository.FindBy(t => t.Key == token);
+            if (entity.Any()) return true;
+            return false;
         }
 
         public void Register(Application v)

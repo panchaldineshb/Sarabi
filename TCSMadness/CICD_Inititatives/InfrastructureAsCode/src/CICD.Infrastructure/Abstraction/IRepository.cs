@@ -1,10 +1,13 @@
 ﻿using System.Collections.Generic;
-
+using System.Linq.Expressions;
+using System;
 namespace CICD.Infrastructure.Abstraction
 {
     public interface IRepository<T> where T : IEntity<int>
     {
         IEnumerable<T> GetAll();
+
+        IEnumerable<T> FindBy(Expression<Func<T, bool>> predicate);
 
         T GetById(int id);
 

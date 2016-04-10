@@ -168,6 +168,16 @@ namespace CICD.Initialize.Database
                     Type = Infrastructure.Enums.SubjectType.Application
                 });
 
+                // Token
+                var tokenUser_smCardProcessing = context.Tokens.Add(new CICD.Infrastructure.Domain.Token
+                {
+                    User = user_smCardProcessing,
+                });
+                var tokenApp_smCardProcessing = context.Tokens.Add(new CICD.Infrastructure.Domain.Token
+                {
+                    Application = application_smCardProcessing,
+                });
+
                 //
                 // Create categories
                 //
