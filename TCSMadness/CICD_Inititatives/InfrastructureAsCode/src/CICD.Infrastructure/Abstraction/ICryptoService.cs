@@ -21,6 +21,7 @@ namespace CICD.Infrastructure.Abstraction
     }
     public interface ITokenRepository : IRepository<Token>
     {
+        string CreateRegistrationToken(Token item);
     }
 
     public interface IUserRepository : IRepository<User>
@@ -55,5 +56,9 @@ namespace CICD.Infrastructure.Abstraction
         void UnRegister(Application v);
 
         void UnRegister(User v);
+
+        string AddUser(User v);
+
+        string AddApplication(Application v);
     }
 }

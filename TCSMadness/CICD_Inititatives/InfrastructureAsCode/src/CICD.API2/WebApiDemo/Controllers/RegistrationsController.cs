@@ -1,5 +1,6 @@
 ﻿using CICD.Infrastructure.Abstraction;
 using CICD.Infrastructure.Domain;
+using CICD.Infrastructure.Enums;
 using System;
 using System.Net;
 using System.Net.Http;
@@ -14,11 +15,13 @@ namespace CICD.API2.Controllers
     public class RegistrationsController : ApiController
     {
         protected IRegistrationsService _registrationsService = null;
+        protected IUserRepository _userRepository = null;
 
         public RegistrationsController(
-            IRegistrationsService registrationsService)
+            IRegistrationsService registrationsService, IUserRepository userRepository)
         {
             _registrationsService = registrationsService;
+            _userRepository = userRepository;
         }
 
         // GET api/Stuff
@@ -46,12 +49,39 @@ namespace CICD.API2.Controllers
 
         [Route("")]
         [HttpPost]
-        public async Task<IHttpActionResult> Post([FromBody]RegistrationRequest request, CancellationToken cancellationToken)
+        public async Task<IHttpActionResult> Post(RegistrationRequest request)
         {
-            return await Task.FromResult(new ResponseMessageResult(Request.CreateResponse(HttpStatusCode.Created,
-                new RegistrationReponse()
+            string tokenKey = string.Empty;
+            try
+            {
+                switch (request.RegistrationType)
                 {
-                })));
+                    case SubjectType.User:
+                        tokenKey =  _registrationsService.AddUser(request.User);
+                        break;
+                    case SubjectType.Application:
+                        tokenKey = _registrationsService.AddApplication(request.Application);
+                        break;
+                    case SubjectType.Device:
+                        break;
+                }
+
+                return await Task.FromResult(new ResponseMessageResult(Request.CreateResponse(HttpStatusCode.Created,
+                    new RegistrationReponse()
+                    {
+                        IsSuccessful = true,
+                        TokenKey = tokenKey
+                    })));
+            }
+            catch(Exception ex)
+            {
+                return await Task.FromResult(new ResponseMessageResult(Request.CreateResponse(HttpStatusCode.BadRequest,
+                   new RegistrationReponse()
+                   {
+                       IsSuccessful = false,
+                       ErrorMessage = "Error in registration. " + ex.Message
+                   })));
+            }
         }
 
         private IHttpActionResult Try(Func<IHttpActionResult> action)

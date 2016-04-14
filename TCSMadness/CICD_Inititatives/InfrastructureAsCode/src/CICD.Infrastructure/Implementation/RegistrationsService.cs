@@ -113,5 +113,29 @@ namespace CICD.Infrastructure.Implementation
             _userValidator.Validate();
             _userRepository.Delete(v);
         }
+
+        public string AddUser(User v)
+        {
+            string tokenKey = string.Empty;
+
+            _userRepository.Add(v);
+            Token t = new Token();
+            t.User = v;
+            tokenKey = _tokenRepository.CreateRegistrationToken(t);
+
+            return tokenKey;
+        }
+
+        public string AddApplication(Application v)
+        {
+            string tokenKey = string.Empty;
+
+            _applicationRepository.Add(v);
+            Token t = new Token();
+            t.Application = v;
+           tokenKey =  _tokenRepository.CreateRegistrationToken(t);
+
+            return tokenKey;
+        }
     } // class
 } // namespace

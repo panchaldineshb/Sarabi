@@ -85,9 +85,12 @@ namespace CICD.Infrastructure.Implementation
 
         public void Add(Application item)
         {
-            var nextKey = Subjects.Values.Max(v => v.Id) + 1;
-            item.Id = nextKey;
-            Subjects.Add(nextKey, item);
+            //var nextKey = Subjects.Values.Max(v => v.Id) + 1;
+            //item.Id = nextKey;
+            //Subjects.Add(nextKey, item);
+
+            item.Id = _context.Applications.Count() + 1;
+            _context.Applications.Add(item);
         }
 
         public void Delete(Application item)

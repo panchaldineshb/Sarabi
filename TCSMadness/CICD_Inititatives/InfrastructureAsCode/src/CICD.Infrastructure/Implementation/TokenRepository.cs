@@ -40,6 +40,13 @@ namespace CICD.Infrastructure.Implementation
             _context.SaveChanges();
         }
 
+        public string CreateRegistrationToken(Token item)
+        {
+            _context.Tokens.Add(item);
+            _context.SaveChanges();
+            return item.Key;
+        }
+
         public void Delete(Token item)
         {
             _context.Tokens.Remove(item);

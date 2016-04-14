@@ -23,49 +23,8 @@ namespace CICD.Infrastructure.Implementation
 
         private IDictionary<int, User> Subjects
         {
-            get
-            ;
-            set
-            ;
-        }
-
-        private void LoadUsers()
-        {
-            var vids = new List<User>
-                             {
-                                 new User
-                                     {
-                                         Id = 1,
-                                         Name = "Cassavetes"
-                                     },
-                                 new User
-                                     {
-                                         Id = 2,
-                                         Name = "Cassavetes"
-                                     },
-                                 new User
-                                     {
-                                         Id = 3,
-                                         Name = "Brooks"
-                                     },
-                                 new User
-                                     {
-                                         Id = 4,
-                                         Name = "Lucas"
-                                     },
-                                 new User
-                                     {
-                                         Id = 5,
-                                         Name = "Kobayashi"
-                                     }
-                             };
-            var vidsToAdd = new Dictionary<int, User>();
-            foreach (var vid in vids)
-            {
-                vidsToAdd.Add(vid.Id, vid);
-            }
-
-            Subjects = vidsToAdd;
+            get;
+            set;
         }
 
         public IEnumerable<User> GetAll()
@@ -86,9 +45,12 @@ namespace CICD.Infrastructure.Implementation
 
         public void Add(User item)
         {
-            var nextKey = Subjects.Values.Max(v => v.Id) + 1;
-            item.Id = nextKey;
-            Subjects.Add(nextKey, item);
+            //var nextKey = Subjects.Values.Max(v => v.Id) + 1;
+            //item.Id = nextKey;
+            //Subjects.Add(nextKey, item);
+
+            item.Id = _context.Users.Count() + 1;
+            _context.Users.Add(item);
         }
 
         public void Delete(User item)
