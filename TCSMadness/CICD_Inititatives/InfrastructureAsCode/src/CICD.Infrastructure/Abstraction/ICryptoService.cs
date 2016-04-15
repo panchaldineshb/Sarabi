@@ -19,6 +19,11 @@ namespace CICD.Infrastructure.Abstraction
     public interface IApplicationRepository : IRepository<Application>
     {
     }
+
+    public interface INodeRepository : IRepository<Node>
+    {
+    }
+
     public interface ITokenRepository : IRepository<Token>
     {
         string CreateRegistrationToken(Token item);
@@ -60,5 +65,7 @@ namespace CICD.Infrastructure.Abstraction
         string AddUser(User v);
 
         string AddApplication(Application v);
+
+        string AddNode(Node v);
     }
 }

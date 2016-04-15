@@ -111,6 +111,7 @@
     <Compile Include="Abstraction\VoidResponse.cs" />
     <Compile Include="Database\InfrastructureConfiguration.cs" />
     <Compile Include="Database\InfrastructureContext.cs" />
+    <Compile Include="Domain\Node.cs" />
     <Compile Include="Domain\RegistrationReponse.cs" />
     <Compile Include="Domain\CryptoReponse.cs" />
     <Compile Include="Domain\RegistrationRequest.cs" />
@@ -122,6 +123,7 @@
     <Compile Include="Exceptions\ExceptionConstants.cs" />
     <Compile Include="Extensions\CastExtensions.cs" />
     <Compile Include="Implementation\DeploymentsService.cs" />
+    <Compile Include="Implementation\NodeRepository.cs" />
     <Compile Include="Implementation\RegistrationsService.cs" />
     <Compile Include="Implementation\CryptoService.cs" />
     <Compile Include="Implementation\ApplicationRepository.cs" />

@@ -63,6 +63,7 @@ namespace CICD.API2.Controllers
                         tokenKey = _registrationsService.AddApplication(request.Application);
                         break;
                     case SubjectType.Device:
+                        tokenKey = _registrationsService.AddNode(request.Node);
                         break;
                 }
 

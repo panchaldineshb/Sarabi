@@ -38,6 +38,8 @@ namespace CICD.Infrastructure.Domain
         public Application Application { get; set; }
 
         public User User { get; set; }
+
+        public Node Node { get; set; }
     }
 
     public class Policy : IEntity<int>

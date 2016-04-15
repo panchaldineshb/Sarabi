@@ -47,17 +47,19 @@ namespace CICD.Infrastructure.Implementation
     {
         private IApplicationRepository _applicationRepository;
         private IUserRepository _userRepository;
+        private INodeRepository _nodeRepository;
         private ITokenRepository _tokenRepository;
 
         private IValidator<Application> _applicationValidator;
         private IValidator<User> _userValidator;
 
         public RegistrationsService(
-            IUserRepository userRepository, IApplicationRepository applicationRepository, ITokenRepository tokenRepository)
+            IUserRepository userRepository, IApplicationRepository applicationRepository, INodeRepository nodeRepository, ITokenRepository tokenRepository)
         {
             this._applicationRepository = applicationRepository;
-            this._tokenRepository = tokenRepository;
             this._userRepository = userRepository;
+            this._nodeRepository = nodeRepository;
+            this._tokenRepository = tokenRepository;
         }
 
         public bool ValidateToken(string token)
@@ -134,6 +136,18 @@ namespace CICD.Infrastructure.Implementation
             Token t = new Token();
             t.Application = v;
            tokenKey =  _tokenRepository.CreateRegistrationToken(t);
+
+            return tokenKey;
+        }
+
+        public string AddNode(Node v)
+        {
+            string tokenKey = string.Empty;
+
+            _nodeRepository.Add(v);
+            Token t = new Token();
+            t.Node = v;
+            tokenKey = _tokenRepository.CreateRegistrationToken(t);
 
             return tokenKey;
         }

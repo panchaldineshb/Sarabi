@@ -7,8 +7,10 @@ namespace CICD.Infrastructure.Domain
     {
         public SubjectType RegistrationType { get; set; }
 
-    public User User { get; set; }
+        public User User { get; set; }
 
         public Application Application { get; set; }
+
+        public Node Node { get; set; }
     }
 }
