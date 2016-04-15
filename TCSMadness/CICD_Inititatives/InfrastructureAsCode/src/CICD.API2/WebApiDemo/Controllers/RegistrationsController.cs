@@ -46,6 +46,7 @@ namespace CICD.API2.Controllers
         //
         // Create User and send tokenKey
         // Create Application and send tokenKey
+        // Create Device/Node and send tokenKey
 
         [Route("")]
         [HttpPost]
