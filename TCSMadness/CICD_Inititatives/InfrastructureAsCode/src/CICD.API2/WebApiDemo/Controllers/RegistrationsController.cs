@@ -11,6 +11,8 @@ using System.Web.Http.Results;
 
 namespace CICD.API2.Controllers
 {
+    /* Default settings
+    */
     [RoutePrefix("api/cicd/registrations")]
     public class RegistrationsController : ApiController
     {
